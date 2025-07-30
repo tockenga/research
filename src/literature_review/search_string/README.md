@@ -66,6 +66,37 @@ ieee_result = generator.generate_for_database('ieee', search_terms)
 generator.print_all_results(search_terms)
 ```
 
+## Jupyter Notebook Usage
+
+To use the generator directly in a Jupyter Notebook (.ipynb file), you can set up your Python path for the session and then import the `SearchStringGenerator` class.
+
+```python
+from src.literature_review.search_string import SearchStringGenerator
+
+# Initialize generator
+generator = SearchStringGenerator()
+
+# Define search terms (groups will be AND-ed, terms within groups will be OR-ed)
+search_terms = [
+    ['cryptocurrency', 'ethereum', 'bitcoin'],  # Group 1: crypto terms
+    ['returns'],                                 # Group 2: returns
+    ['prediction', 'predict', 'forecast']       # Group 3: prediction terms
+]
+
+# Print all formatted results (matches original notebook output style)
+generator.print_all_results(search_terms)
+
+# You can also generate for specific databases or get structured results
+ieee_result = generator.generate_for_database('ieee', search_terms)
+print("\n--- Specific IEEE Result ---")
+print(ieee_result['search_string'])
+
+all_results = generator.generate_all(search_terms)
+print("\n--- All Results (Structured) ---")
+import json
+print(json.dumps(all_results, indent=2))
+```
+
 ## Input Formats
 
 ### JSON Format
