@@ -1,1 +1,17 @@
 .DS_Store
+.venv/
+.vscode/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.ipynb
+
+# data
+*.csv
+
+# Python packaging
+*.egg-info/
