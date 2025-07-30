@@ -1,0 +1,14 @@
+[project]
+name = "research"
+version = "0.1.0"
+description = "This repository contains code that aims to support conducting typical research tasks such as converting search strings into specific data base syntax or automated scanning of titles and abstracts."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "jupyter>=1.1.1",
+]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+exclude = ["notebooks*", "tests*"]
