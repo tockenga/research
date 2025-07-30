@@ -52,3 +52,7 @@ uv run pytest
     ```
     This should output sth like: Installed kernelspec research in /Users/user/Library/Jupyter/kernels/research
     After this, you should be able to select "Python research" from the kernel list in Jupyter.
+
+## Project Components
+
+- **Literature Review Search String Generator**: A Python package for generating academic search strings. See its [README.md](src/literature_review/search_string/README.md) for details.
